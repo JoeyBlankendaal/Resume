@@ -156,36 +156,36 @@
 
             /* Close the mobile navigation dropdown if one of its anchors is clicked on. */
             document.body.onclick = function(e)
-            [
+            {
                 var navAnchor = "nav-a";
                 
                 if (window.event)
-                [
+                {
                     /* Assign the clicked element to the event. (Internet Explorer 6-8) */
                     e = event.srcElement;
-                ]
+                }
                 else
-                [
+                {
                     /* Assign the clicked element to the event variable. (modern browsers) */
                     e = e.target;
-                ]
+                }
                 
                 /* Check if the clicked element has a class name and if it is a navigation anchor. */
                 if (e.className && e.className.indexOf(navAnchor) != -1)
-                [
+                {
                     document.getElementById(navCheckbox).checked = false;
-                ]
-            ]
+                }
+            }
 
             /* Close the mobile navigation dropdown if the screen width exceeds 768 pixels. */
             window.addEventListener("resize", function(e)
-            [
+            {
                 /* Check if the screen resizes to a desktop width. */
                 if (document.body.clientWidth > 768)
-                [
+                {
                     document.getElementById(navCheckbox).checked = false;
-                ]
-            ]);
+                }
+            });
         </script>
     </body>
 </html>
