@@ -1,0 +1,191 @@
+<!--
+    Copyright (c) 2020 Joey Blankendaal
+    https://joey.blankendaal.org/
+-->
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+    <head>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <title>[name]</title>
+        <link rel="preload" as="style" onload="this.rel='stylesheet'" href="stylesheet.css">
+
+        <noscript>
+            <link rel="stylesheet" href="stylesheet.css">
+        </noscript>
+    </head>
+
+    <body id="top">
+        <div id="header">
+            <div id="banner"></div>
+
+            <nav id="nav">
+                <div class="container">
+                    <input id="nav-input" type="checkbox">
+                    <label for="nav-input" id="nav-label"></label>
+
+                    <ul id="nav-ul">
+                        <li class="nav-li">
+                            <a class="nav-a" href="#experience">Experience</a>
+                        </li>
+
+                        <li class="nav-li">
+                            <a class="nav-a" href="#skills">Skills</a>
+                        </li>
+
+                        <li class="nav-li">
+                            <a class="nav-a" href="#[article 3]">[article 3]</a>
+                        </li>
+
+                        <li class="nav-li">
+                            <a class="nav-a" href="#[article 4]">[article 4]</a>
+                        </li>
+
+                        <li class="nav-li">
+                            <a class="nav-a" href="#[article 5]">[article 5]</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div id="me" role="img"></div>
+        </div>
+
+        <main class="container">
+            <article id="jumbotron">
+                <header>
+                    <h1 id="h1">[name]</h1>
+                    <p id="h1-sub">[position1], [position2], and [position3].</p>
+                </header>
+
+                <p>[location] &middot; <a class="a" href="mailto:[email]">[email]</a></p>
+
+                <ul id="jumbotron-ul">
+                    <li class="jumbotron-li">
+                        <a class="jumbotron-a" href="https://github.com/[github]" target="_blank">
+                            <img alt="GitHub" class="jumbotron-img" src="placeholder.jpg" title="GitHub">
+                        </a>
+                    </li>
+
+                    <li class="jumbotron-li">
+                        <a class="jumbotron-a" href="https://linkedin.com/in/[linkedin]" target="_blank">
+                            <img alt="LinkedIn" class="jumbotron-img" src="placeholder.jpg" title="LinkedIn">
+                        </a>
+                    </li>
+
+                    <li class="jumbotron-li">
+                        <a class="jumbotron-a" href="https://twitter.com/[twitter]" target="_blank">
+                            <img alt="Twitter" class="jumbotron-img" src="placeholder.jpg" title="Twitter">
+                        </a>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="article" id="experience">
+                <header class="column-20">
+                    <h2 class="h2">Experience</h2>
+                </header>
+
+                <div class="column-80">
+                    <section class="section">
+                        <header>
+                            <a href="[company 1's URL]" target="_blank">
+                                <img alt="[company 1]" class="h3-icon-wide" src="placeholder.jpg" title="[company 1]">
+                            </a>
+
+                            <h3 class="h3">[position 1]</h3>
+                            <p class="h3-sub">[company 1]</p>
+                        </header>
+
+                        <p class="date"><time datetime="[date 1]">[date 1]</time>&ndash;<time datetime="[date 2]">[date 2]</time></p>
+
+                        <ul class="ul">
+                            <li>[accomplishment 1]</li>
+                            <li>[accomplishment 2]</li>
+                            <li>[accomplishment 3]</li>
+                        </ul>
+                    </section>
+
+                    <section class="section">
+                        <header>
+                            <a href="[company 2's URL]" target="_blank">
+                                <img alt="[company 2]" class="h3-icon" src="placeholder.jpg" title="[company 2]">
+                            </a>
+
+                            <h3 class="h3">[position 2]</h3>
+                            <p class="h3-sub">[company 2]</p>
+                        </header>
+
+                        <p class="date"><time datetime="[date 1]">[date 1]</time>&ndash;<time datetime="[date 2]">[date 2]</time></p>
+
+                        <ul class="ul">
+                            <li>[accomplishment 1]</li>
+                            <li>[accomplishment 2]</li>
+                            <li>[accomplishment 3]</li>
+                        </ul>
+                    </section>
+                </div>
+            </article>
+
+            <article class="article" id="skills">
+                <header class="column-20">
+                    <h2 class="h2">Skills</h2>
+                </header>
+
+                <div class="column-80">
+                    <div class="section">
+                        <ul class="ul">
+                            <li><strong>[category 1]:</strong> [skill 1], [skill 2], and [skill 3].</li>
+                            <li><strong>[category 2]:</strong> [skill 1], [skill 2], and [skill 3].</li>
+                            <li><strong>[category 3]:</strong> [skill 1], [skill 2], and [skill 3].</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <div id="footer" role="contentinfo">
+            <p class="container" id="footer-p">&copy; [name] &middot; <a class="a" href="#top">Go to top</a></p>
+        </div>
+
+        <script>
+            var navCheckbox = "nav-input";
+
+            /* Close the mobile navigation dropdown if one of its anchors is clicked on. */
+            document.body.onclick = function(e)
+            [
+                var navAnchor = "nav-a";
+                
+                if (window.event)
+                [
+                    /* Assign the clicked element to the event. (Internet Explorer 6-8) */
+                    e = event.srcElement;
+                ]
+                else
+                [
+                    /* Assign the clicked element to the event variable. (modern browsers) */
+                    e = e.target;
+                ]
+                
+                /* Check if the clicked element has a class name and if it is a navigation anchor. */
+                if (e.className && e.className.indexOf(navAnchor) != -1)
+                [
+                    document.getElementById(navCheckbox).checked = false;
+                ]
+            ]
+
+            /* Close the mobile navigation dropdown if the screen width exceeds 768 pixels. */
+            window.addEventListener("resize", function(e)
+            [
+                /* Check if the screen resizes to a desktop width. */
+                if (document.body.clientWidth > 768)
+                [
+                    document.getElementById(navCheckbox).checked = false;
+                ]
+            ]);
+        </script>
+    </body>
+</html>
